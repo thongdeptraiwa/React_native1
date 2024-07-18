@@ -1,0 +1,196 @@
+{
+	"info": {
+		"_postman_id": "e270f2cc-3dda-4794-af83-14c420311231",
+		"name": "CRO101",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "2397347"
+	},
+	"item": [
+		{
+			"name": "Đăng nhập",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n  \"email\": \"khoa123@gmail.com\",\n  \"password\": \"123\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://cro101-b166e76cc76a.herokuapp.com/users/login",
+					"protocol": "https",
+					"host": [
+						"cro101-b166e76cc76a",
+						"herokuapp",
+						"com"
+					],
+					"path": [
+						"users",
+						"login"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Đăng ký",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n  \"email\": \"khoa1234@gmail.com\",\n  \"password\": \"123\",\n  \"name\": \"nguyễn minh khoa\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://cro101-b166e76cc76a.herokuapp.com/users/register",
+					"protocol": "https",
+					"host": [
+						"cro101-b166e76cc76a",
+						"herokuapp",
+						"com"
+					],
+					"path": [
+						"users",
+						"register"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Cập nhật thông tin cá nhân",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n  \"email\": \"khoa123@gmail.com\",\n  \"password\": \"123\",\n  \"name\": \"nguyễn thái khang\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://cro101-b166e76cc76a.herokuapp.com/users/update-profile",
+					"protocol": "https",
+					"host": [
+						"cro101-b166e76cc76a",
+						"herokuapp",
+						"com"
+					],
+					"path": [
+						"users",
+						"update-profile"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Mua hàng",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n  \"email\": \"khoa123@gmail.com\",\n  \"carts\": [\n    {\n      \"product_id\": \"65b07ff1fc13ae48eeb4c67c\",\n      \"product_name\": \"Gabianus pacificus\",\n      \"product_image\": \"http://dummyimage.com/184x100.png/dddddd/000000\",\n      \"quantities\": [\n        {\n          \"size\": \"M\",\n          \"price\": 123,\n          \"quantity\": 12\n        },\n        {\n          \"size\": \"L\",\n          \"price\": 222,\n          \"quantity\": 33\n        }\n      ]\n    }\n  ]\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://cro101-b166e76cc76a.herokuapp.com/carts",
+					"protocol": "https",
+					"host": [
+						"cro101-b166e76cc76a",
+						"herokuapp",
+						"com"
+					],
+					"path": [
+						"carts"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Lấy danh sách danh mục",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://cro101-b166e76cc76a.herokuapp.com/categories",
+					"protocol": "https",
+					"host": [
+						"cro101-b166e76cc76a",
+						"herokuapp",
+						"com"
+					],
+					"path": [
+						"categories"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Lấy danh sách sản phẩm theo 1 danh mục",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://cro101-b166e76cc76a.herokuapp.com/products?category=65b07ddcfc13ae4836b4cb08",
+					"protocol": "https",
+					"host": [
+						"cro101-b166e76cc76a",
+						"herokuapp",
+						"com"
+					],
+					"path": [
+						"products"
+					],
+					"query": [
+						{
+							"key": "category",
+							"value": "65b07ddcfc13ae4836b4cb08"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Lấy chi tiết sản phẩm theo id",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://cro101-b166e76cc76a.herokuapp.com/products/65b07ff1fc13ae48eeb4c67c",
+					"protocol": "https",
+					"host": [
+						"cro101-b166e76cc76a",
+						"herokuapp",
+						"com"
+					],
+					"path": [
+						"products",
+						"65b07ff1fc13ae48eeb4c67c"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
